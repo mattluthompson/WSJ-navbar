@@ -1,0 +1,15 @@
+.wholeNav {
+  text-align: center;
+}
+
+img {
+  width: 570px;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.grid-container {
+  display: inline-grid;
+}
