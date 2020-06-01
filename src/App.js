@@ -1,18 +1,22 @@
 import React from 'react';
 import logo from './images/wsj-logo.png';
 import './App.css';
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className = "wholeNav">
       <div>
-        <img src={logo} alt="WSJ Logo" />
-        <p>English Edition | June 1, 2020 | Print Edition | Video | Latest Headlines</p>
+        
       </div>
-      <Navbar className = "justify-content-center" bg="light" expand="lg">
-        <Nav>
+      <Container className = "navContainer justify-content-center">
+      <img src={logo} alt="WSJ Logo" />
+        <p>English Edition | June 1, 2020 | Print Edition | Video | Latest Headlines</p>
+      <Navbar bg="light" expand="lg">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className = "navbar navbar-expand-lg navbar-light bg-light">
           <Nav.Link>Home </Nav.Link>
           <NavDropdown title="World" id="basic-nav-dropdown">
             <NavDropdown title="Regions" className = "dropdown-menu-right">
@@ -102,7 +106,9 @@ function App() {
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
           </NavDropdown>
         </Nav>
+        </Navbar.Collapse>
       </Navbar>
+      </Container>
     </div>
   );
 }

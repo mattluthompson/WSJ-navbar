@@ -3,13 +3,35 @@
 }
 
 img {
-  width: 570px;
+  width: 40%;
+  position: absolute;
+  justify-content: center;
+  top: 10px;
 }
 
 .dropdown-menu {
   width: 100%;
 }
 
-.grid-container {
-  display: inline-grid;
+.centerNav{
+  justify-items: center;
+}
+
+.navContainer {
+  min-width: 100%;
+}
+
+p {
+  visibility: collapse;
+}
+
+@media (min-width: 989px){
+  img {
+    width: 570px;
+    position: static;
+  }
+
+  p {
+    visibility: visible;
+  }
 }
